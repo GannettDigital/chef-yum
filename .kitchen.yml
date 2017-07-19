@@ -3,18 +3,18 @@ driver:
 
 provisioner:
   name: chef_zero
+  deprecations_as_errors: true
+
+verifier:
+  name: inspec
 
 platforms:
-  - name: centos-5.11
-  - name: centos-5.11-i386
-  - name: centos-6.4
-  - name: centos-6.7
-  - name: centos-6.7-i386
-  - name: centos-7.1
-  - name: fedora-21
+  - name: centos-6.9
+  - name: centos-7.3
+  - name: fedora-25
 
 suites:
   - name: default
     run_list:
       - recipe[yum::default]
-      - recipe[yum_test::test_repo]
+      - recipe[yum_test::test_globalconfig_two]
