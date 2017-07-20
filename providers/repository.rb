@@ -99,7 +99,7 @@ end
 
 action :makecache do
   execute "yum-makecache-#{new_resource.repositoryid}" do
-    command "yum -q makecache --disablerepo=* --enablerepo=#{new_resource.repositoryid}"
+    command "yum -q -y makecache --disablerepo=* --enablerepo=#{new_resource.repositoryid}"
     action :run
   end
 
