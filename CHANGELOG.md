@@ -2,6 +2,10 @@ yum Cookbook CHANGELOG
 ======================
 This file is used to list changes made in each version of the yum cookbook.
 
+v3.8.3 (2017-07-20)
+-------------------
+- PAAS-7968 - add -y to makecache to accept remote gpg key verification 
+
 v3.8.2 (2015-10-28)
 -------------------
 - #141 - Replace clean_headers with clean_metadata
